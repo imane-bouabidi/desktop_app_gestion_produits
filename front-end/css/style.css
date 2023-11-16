@@ -1,0 +1,49 @@
+*{
+    background-color: #AED2FF;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form h1{
+    color: white;
+    background-color: transparent;
+    margin-bottom: 60px;
+}
+
+form{
+    margin-top: 7%;
+    background-color: #27005D;
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type="text"],input[type="password"]{
+    width: 70%;
+    border: none;
+    height: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+form input[type="submit"]{
+    margin-top: 30px;
+    width: 70%;
+    border: none;
+    height: 30px;
+    margin-bottom: 30px;
+    background-color: #F7B633;
+    color: white;
+    border-radius: 5px;
+}
+
+form img{
+    width: 300px;
+    background-color: transparent;
+}
