@@ -3,6 +3,7 @@
 }
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -46,4 +47,8 @@ form input[type="submit"]{
 form img{
     width: 300px;
     background-color: transparent;
+}
+
+p{
+    color: rgb(195, 31, 31);
 }

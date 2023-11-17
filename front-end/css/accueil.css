@@ -19,7 +19,7 @@ header img{
 }
 
 .categorie select{
-    width: 15vw;
+    width: 12vw;
     height: 8vh;
     border: none;
     background-color: #1F3C88;
@@ -35,16 +35,22 @@ header img{
     align-items: center;
     margin: 40px 120px;
 }
-.products{
+.all-products{
     display: flex;
+    /* flex-direction: row; */
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 8% 12%;
 }
 
 .card{
     margin-bottom: 50px;
 }
 
+.product-img{
+    width: 300px;
+    height: 350px;
+}
 .products img{
     width: 300px;
 }
@@ -52,4 +58,22 @@ header img{
 .rights{
     margin-top: 100px;
     text-align: center;
+}
+input[type="submit"]{
+    width: 10vw;
+    height: 8vh;
+    border: none;
+    background-color: #1F3C88;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+input[type="submit"]:hover{
+
+    background-color: #9dc2ef;
+    border-radius: 7px;
+    color: #27005D;
+    text-align: center;
+    font-size: 18px;
 }
