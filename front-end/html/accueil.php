@@ -23,7 +23,7 @@ $categories = $connexion->query("SELECT DISTINCT categorie FROM products")
                 <!-- Selection par stock -->
                 <select name="selectedStock">
                     <option value="all">All</option>
-*                    <option value="rupture" <?php echo (isset($_POST['selectedStock']) && $_POST['selectedStock'] === 'rupture') ? 'selected' : ''; ?>>En rupture</option>
+                    <option value="rupture" <?php echo (isset($_POST['selectedStock']) && $_POST['selectedStock'] === 'rupture') ? 'selected' : ''; ?>>En rupture</option>
                 </select>
                 <!-- Selection par categorie -->
                 <select name="selectedCategory">
@@ -85,3 +85,6 @@ $categories = $connexion->query("SELECT DISTINCT categorie FROM products")
     </div>
 </body>
 </html>
+
+
+
