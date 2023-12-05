@@ -3,7 +3,7 @@ include ('../../back-end/php/connexion.php');
 if ($connexion->connect_error) {
     die("Échec de la connexion : " . $connexion->connect_error);
 }
-$categories = $connexion->query("SELECT DISTINCT categorie FROM products")
+$categories = $connexion->query("SELECT DISTINCT categorie FROM products");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ $categories = $connexion->query("SELECT DISTINCT categorie FROM products")
                     <option value="*" <?php echo (!isset($_POST['selectedCategory']) || $_POST['selectedCategory'] === '*') ? 'selected' : ''; ?>>All</option>
                     <?php
                         if ($categories->num_rows > 0) {
-                            mysqli_data_seek($categories, 0);
+                            // mysqli_data_seek($categories, 0);
                             while ($rows = $categories->fetch_assoc()) {
                                 $categorie = $rows["categorie"];
                                 ?>
@@ -50,14 +50,12 @@ $categories = $connexion->query("SELECT DISTINCT categorie FROM products")
         <div class="all-products">
             <?php
                 $filterCondition = "";
-// no filter stick variable
-                // Check if stock is set to rupture
+
                 if (isset($_POST["selectedStock"]) && $_POST['selectedStock'] === 'rupture') {
                     $filterCondition .= " AND quantité_min > quantité_stock";
                 }
-                // Check if category is set
                 if (isset($_POST['selectedCategory']) && $_POST['selectedCategory'] !== '*') {
-                    $selectedCategory = $connexion->real_escape_string($_POST['selectedCategory']);
+                    $selectedCategory = $_POST['selectedCategory'];
                     $filterCondition .= " AND categorie = '$selectedCategory'";
                 }
     
